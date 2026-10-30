@@ -1,0 +1,59 @@
+.account-header { display: flex; justify-content: space-between; align-items: center; min-height: 76px; padding: 0 max(24px, calc((100% - 1120px) / 2)); border-bottom: 1px solid var(--line); }
+.account-back { border: 0; border-bottom: 1px solid #aeb4ac; padding: 6px 0; background: transparent; color: var(--ink); font-size: 12px; font-weight: 600; }
+.account-back:hover { color: var(--orange-dark); }
+.account-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 430px); align-items: center; gap: clamp(42px, 8vw, 110px); width: min(1120px, calc(100% - 48px)); min-height: calc(100vh - 166px); margin: 0 auto; padding: 56px 0; }
+.account-story { position: relative; min-height: 280px; padding: 35px 0; }
+.account-story h1 { font-size: clamp(48px, 6vw, 72px); }
+.account-story h1 em { color: var(--orange); font-style: normal; }
+.account-story > p:last-of-type { max-width: 340px; margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.account-story-mark { position: absolute; top: 0; right: 12px; color: #9da69f; font: 600 11px 'Space Grotesk', sans-serif; }
+.account-story-mark span { padding: 0 5px; color: var(--orange); }
+.account-panel { padding: 26px; border: 1px solid var(--line); background: var(--white); }
+.role-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 22px; padding: 4px; background: #eeede6; }
+.role-option { min-height: 36px; border: 0; background: transparent; color: #606a63; font-size: 12px; font-weight: 600; }
+.role-option[aria-pressed="true"] { background: white; color: var(--ink); box-shadow: 0 1px 5px rgb(25 35 28 / 10%); }
+.account-panel .eyebrow { margin-bottom: 7px; }
+.account-panel h2 { font-size: 26px; }
+.account-intro { margin: 7px 0 16px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.account-panel .field-label { margin-top: 12px; }
+.account-submit { margin-top: 16px; }
+.credential-box { margin-top: 17px; padding: 12px; background: #f1f0e9; }
+.credential-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; color: #566259; font-size: 10px; font-weight: 700; }
+.demo-tag { padding: 3px 6px; background: var(--lime); color: #37422f; font-size: 8px; letter-spacing: .08em; }
+.credential-box p { display: flex; justify-content: space-between; gap: 12px; margin: 5px 0 0; font-size: 10px; }
+.credential-box p span { color: var(--muted); }
+.credential-box code { color: var(--ink); font-size: 10px; }
+.security-warning { margin: 13px 0 0; color: #7d5037; font-size: 10px; line-height: 1.55; }
+.security-warning strong { color: #61351f; }
+.account-footer { display: flex; justify-content: space-between; gap: 14px; padding: 17px max(24px, calc((100% - 1120px) / 2)); border-top: 1px solid var(--line); background: #eeede6; color: #67706a; font-size: 10px; }
+
+.staff-main { width: min(1120px, calc(100% - 48px)); min-height: calc(100vh - 166px); margin: 0 auto; padding: 55px 0 70px; }
+.staff-title-row { display: flex; justify-content: space-between; align-items: end; gap: 20px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+.staff-title-row h1 { font-size: clamp(36px, 5vw, 55px); }
+.staff-title-row .account-intro { margin-bottom: 0; }
+.signed-in-chip { padding: 8px 11px; background: #eef0df; color: #42523e; font-size: 10px; }
+.staff-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0 34px; }
+.staff-stats article { display: grid; gap: 10px; min-height: 135px; align-content: space-between; padding: 17px; border: 1px solid var(--line); background: var(--white); }
+.staff-stats article span { color: var(--muted); font-size: 11px; }
+.staff-stats article strong { font: 500 28px 'Space Grotesk', sans-serif; }
+.staff-stats article small { color: #748047; font-size: 9px; }
+.staff-notice { max-width: 650px; padding: 20px; border-left: 3px solid var(--orange); background: #efeee7; }
+.staff-notice h2 { margin-bottom: 8px; font-size: 20px; }
+.staff-notice p:not(.eyebrow) { max-width: 560px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.staff-notice .account-back { display: inline-block; margin-top: 7px; }
+
+@media (max-width: 760px) {
+  .account-header { min-height: 64px; padding-inline: 18px; }
+  .account-main { grid-template-columns: 1fr; gap: 18px; width: min(100% - 32px, 500px); padding: 30px 0 38px; }
+  .account-story { min-height: 0; padding: 12px 0 0; }
+  .account-story h1 { font-size: 48px; }
+  .account-story > p:last-of-type { margin: 12px 0 0; }
+  .account-story-mark { top: 8px; }
+  .account-panel { padding: 20px; }
+  .staff-main { width: calc(100% - 36px); padding-top: 34px; }
+  .staff-title-row { display: grid; }
+  .signed-in-chip { width: fit-content; }
+  .staff-stats { grid-template-columns: 1fr; gap: 9px; }
+  .staff-stats article { min-height: 105px; }
+  .account-footer { padding-inline: 18px; }
+}

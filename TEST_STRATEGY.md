@@ -9,6 +9,9 @@ Validate a fictional retail storefront with deterministic catalog data and a no-
 | Priority | Scenario | Expected result |
 |---|---|---|
 | P0 | Catalog loads | Products, prices, ratings, and images render with accessible names |
+| P1 | Customer demo sign-in | Published customer credentials return to the storefront |
+| P1 | Staff demo sign-in | Published staff credentials open the staff dashboard |
+| P1 | Staff session guard/sign-out | No-session visitors redirect to login; sign-out clears the session |
 | P0 | Search products | Matching results remain; unmatched text shows an empty state |
 | P1 | Filter category | Only products in the selected category are shown |
 | P1 | Sort by price | Results order correctly from low to high and high to low |
@@ -30,4 +33,4 @@ Validate a fictional retail storefront with deterministic catalog data and a no-
 
 ## Explicit exclusions
 
-No accounts, backend inventory, server-side cart, payment gateway, refunds, shipping integration, load test, or security certification are implemented. The local simulator recognizes only its documented dummy card numbers. Card-field values are not persisted or sent over the network. Never use real customer data or secrets in this demo.
+No real accounts, backend authentication, backend inventory, server-side cart, payment gateway, refunds, shipping integration, load test, or security certification are implemented. The customer/staff roles are public demo credentials checked in browser code and sessionStorage, not access control. The local simulator recognizes only its documented dummy card numbers. Card-field values are not persisted or sent over the network. Never use real customer data or secrets in this demo.

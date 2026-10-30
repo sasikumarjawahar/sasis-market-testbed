@@ -28,6 +28,7 @@ app.innerHTML = `
       <a href="#catalog">Discover</a>
       <a href="#checkout">Checkout</a>
       <a href="#about">About</a>
+      <a href="/login.html">Sign in</a>
     </nav>
     <a class="bag-link" href="#checkout" aria-label="Shopping bag, 0 items">
       <span aria-hidden="true">Bag</span><span class="bag-count" id="header-cart-count">0</span>
